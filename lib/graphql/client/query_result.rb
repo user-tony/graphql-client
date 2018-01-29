@@ -220,7 +220,7 @@ module GraphQL
 
             class_eval <<-RUBY, __FILE__, __LINE__
               def #{field_alias}?
-                #{field_alias} ? true : false
+                field_alias ? true : false
               end
             RUBY
             field_readers << "#{field_alias}?".to_sym
